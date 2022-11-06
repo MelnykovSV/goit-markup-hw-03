@@ -13,11 +13,33 @@ body {
   font-weight: 400;
   color: var(--default-gray);
 }
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 a {
   text-decoration: none;
 }
+ul {
+  padding: 0;
+}
+* {
+  margin: 0;
+}
 
 /*------------------------- header ----------------------------*/
+.header__body {
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -31,22 +53,40 @@ a {
 }
 .menu {
   list-style: none;
+  display: flex;
+  margin-left: 93px;
 }
+.menu > .menu__item:not(:first-child) {
+  margin-left: 50px;
+}
+
 .menu__link {
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--dark);
 }
+.menu__link--current {
+  color: var(--blue);
+}
 .menu__link:hover,
 .menu__link:focus {
   color: var(--blue);
 }
+.menu a {
+  display: block;
+}
+
 .header__contacts {
+  display: flex;
+  margin-left: auto;
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   list-style: none;
+}
+.header__contacts > li:not(:first-child) {
+  margin-left: 50px;
 }
 .header__email,
 .header__tel {
@@ -61,8 +101,13 @@ a {
 /*------------------------- hero ----------------------------*/
 .hero {
   background-color: var(--bg);
+  height: 600px;
+  padding-top: 200px;
 }
 .hero_title {
+  margin: 0 auto 30px auto;
+  width: 696px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -72,6 +117,10 @@ a {
   color: var(--white);
 }
 .hero_button {
+  display: block;
+  margin: auto;
+  padding: 10px 32px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
@@ -93,6 +142,7 @@ a {
 }
 .features__list {
   list-style: none;
+  display: flex;
 }
 .features-item__title {
   font-weight: 700;
