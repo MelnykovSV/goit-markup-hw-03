@@ -22,6 +22,11 @@ body {
 a {
   text-decoration: none;
 }
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 ul {
   padding: 0;
 }
@@ -101,8 +106,8 @@ ul {
 /*------------------------- hero ----------------------------*/
 .hero {
   background-color: var(--bg);
-  height: 600px;
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero_title {
   margin: 0 auto 30px auto;
@@ -132,6 +137,10 @@ ul {
   border-radius: 4px;
   border: none;
 }
+.hero_button:hover,
+.hero_button:focus {
+  background-color: #188ce8;
+}
 
 /*------------------------- features ----------------------------*/
 
@@ -143,8 +152,18 @@ ul {
 .features__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+}
+.features__list > :not(:first-child) {
+  margin-left: 30px;
+}
+
+.features-item {
+  display: block;
+  width: calc((100% - 90px) / 4);
 }
 .features-item__title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -158,8 +177,12 @@ ul {
 }
 
 /*------------------------- services ----------------------------*/
-
+.services {
+  padding-bottom: 89px;
+}
 .services__title {
+  margin-bottom: 50px;
+
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
@@ -168,6 +191,10 @@ ul {
 }
 .services__list {
   list-style: none;
+  display: flex;
+}
+.services__list .services__item:not(:first-child) {
+  margin-left: 30px;
 }
 
 /*------------------------- our-team ----------------------------*/
@@ -175,7 +202,9 @@ ul {
 .our-team {
   background-color: var(--bg-light);
 }
+
 .our-team__title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -185,9 +214,20 @@ ul {
 }
 .our-team__list {
   list-style: none;
+  display: flex;
+}
+.our-team__list-item {
+  background-color: var(--white);
+  padding-bottom: 30px;
+  text-align: center;
+}
+.our-team__list-item:not(:first-of-type) {
+  margin-left: 30px;
 }
 
 .member-card__title {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -205,7 +245,14 @@ ul {
 .footer {
   background-color: var(--bg);
 }
+.footer__body {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .logo--inverse {
+  display: block;
+  margin-bottom: 20px;
+
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -223,6 +270,9 @@ ul {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--white);
+}
+.footer__list > li:not(:last-child) {
+  margin-bottom: 9px;
 }
 .footer__location {
   font-size: 14px;
@@ -256,10 +306,20 @@ ul {
   width: 0;
 }
 .filters {
+  display: flex;
+  width: fit-content; /*Почему без этого не работает?*/
+  margin-left: auto;
+  margin-right: auto;
   list-style: none;
+  margin-bottom: 50px;
+}
+.filters > li:not(:first-child) {
+  margin-left: 8px;
 }
 
 .filters__button {
+  padding: 6px 25px;
+
   background-color: var(--bg-light);
   font-family: inherit;
   font-weight: 500;
@@ -272,6 +332,7 @@ ul {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .filters__button:hover,
 .filters__button:focus {
   background-color: var(--blue);
@@ -279,16 +340,37 @@ ul {
 }
 .projects {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.card__title {
+.projects a {
+  display: block;
+}
+.projects img {
+  display: block;
+}
+.projects__item {
+  width: calc((100% - 60px) / 3);
+}
+.projects__item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.card__body {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+}
+.projects__item .card__title {
+  margin-top: 20px;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--dark);
 }
-.card__subtitle {
+
+.projects__item .card__subtitle {
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
