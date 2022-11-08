@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <!-- А почему именно normalize а не reset? Тут же все равно остаются ненужные паддинги/маржины, например, в списках. Их пришлось отдельно убирать. Не проще тогда обнулить сразу все паддинги/маржины через reset? -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Портфоліо</title>
   </head>
@@ -24,10 +25,10 @@
           >
           <ul class="menu">
             <li class="menu__item">
-              <a href="index.html" class="menu__link">Студія</a>
+              <a href="./index.html" class="menu__link">Студія</a>
             </li>
             <li class="menu__item">
-              <a href="portfolio.html" class="menu__link menu__link--current"
+              <a href="./portfolio.html" class="menu__link menu__link--current"
                 >Портфоліо</a
               >
             </li>
@@ -53,7 +54,7 @@
     <main class="main">
       <section class="portfolio container section">
         <!-- спрятать-->
-        <h1 class="portfolio__title">Портфоліо</h1>
+        <h1 class="portfolio__title visually-hidden">Портфоліо</h1>
         <!-- спрятать-->
 
         <ul class="filters">
@@ -120,9 +121,8 @@
                   Ресторан <span lang="en">Seafood</span>
                 </h2>
                 <p class="card__subtitle">Додаток</p>
-              </a>
-
               </div>
+            </a>
           </li>
           <li class="projects__item">
             <a href="" class="card">

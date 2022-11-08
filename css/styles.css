@@ -1,16 +1,18 @@
 :root {
   --dark: #212121;
   --blue: #2196f3;
+  --dark-blue: #188ce8;
   --contacts-footer: rgba(255, 255, 255, 0.6);
   --default-gray: #757575;
   --bg: #2f303a;
   --bg-light: #f5f4fa;
   --white: white;
+  --border-header: #ececec;
+  --border: #eeeeee;
 }
 body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
-  font-weight: 400;
   color: var(--default-gray);
 }
 .container {
@@ -21,6 +23,18 @@ body {
 }
 a {
   text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .section {
@@ -35,6 +49,9 @@ ul {
 }
 
 /*------------------------- header ----------------------------*/
+.header {
+  border-bottom: 1px solid var(--border-header);
+}
 .header__body {
   display: flex;
   padding-top: 24px;
@@ -130,7 +147,7 @@ ul {
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--white);
   cursor: pointer;
   background-color: var(--blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -139,7 +156,7 @@ ul {
 }
 .hero_button:hover,
 .hero_button:focus {
-  background-color: #188ce8;
+  background-color: var(--dark-blue);
 }
 
 /*------------------------- features ----------------------------*/
@@ -178,7 +195,7 @@ ul {
 
 /*------------------------- services ----------------------------*/
 .services {
-  padding-bottom: 89px;
+  padding-bottom: 94px;
 }
 .services__title {
   margin-bottom: 50px;
@@ -220,6 +237,9 @@ ul {
   background-color: var(--white);
   padding-bottom: 30px;
   text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .our-team__list-item:not(:first-of-type) {
   margin-left: 30px;
@@ -252,6 +272,7 @@ ul {
 .logo--inverse {
   display: block;
   margin-bottom: 20px;
+  width: fit-content;
 
   font-family: Raleway;
   font-weight: 700;
@@ -271,6 +292,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--white);
 }
+
 .footer__list > li:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -300,14 +322,9 @@ ul {
 }
 /*------------------------- portfolio ----------------------------*/
 
-.portfolio__title {
-  overflow: hidden;
-  height: 0;
-  width: 0;
-}
 .filters {
   display: flex;
-  width: fit-content; /*Почему без этого не работает?*/
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
@@ -338,23 +355,37 @@ ul {
   background-color: var(--blue);
   color: var(--white);
 }
+
 .projects {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
+.projects img {
+  width: 100%;
+}
 .projects a {
   display: block;
 }
-.projects img {
-  display: block;
-}
 .projects__item {
-  width: calc((100% - 60px) / 3);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.projects > .projects__item:nth-child(3) ~ .projects__item {
+  margin-top: 30px;
 }
 .projects__item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
+
+/* А можно вместо того, чтобы выставлять отступы через селекторы выше, использовать для самого списка gap:30px? Так вроде сильно проще.   */
+
+.projects__item {
+  width: calc((100% - 60px) / 3);
+}
+
 .card__body {
   padding-left: 24px;
   padding-right: 24px;
