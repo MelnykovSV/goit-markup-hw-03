@@ -13,7 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <!-- А почему именно normalize а не reset? Тут же все равно остаются ненужные паддинги/маржины, например, в списках. Их пришлось отдельно убирать. Не проще тогда обнулить сразу все паддинги/маржины через reset? -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Портфоліо</title>
   </head>
   <body>
@@ -52,175 +52,181 @@
       </div>
     </header>
     <main class="main">
-      <section class="portfolio container section">
-        <!-- спрятать-->
-        <h1 class="portfolio__title visually-hidden">Портфоліо</h1>
-        <!-- спрятать-->
+      <section class="portfolio section">
+        <div class="container">
+          <!-- спрятать-->
+          <h1 class="portfolio__title visually-hidden">Портфоліо</h1>
+          <!-- спрятать-->
 
-        <ul class="filters">
-          <li class="filters__item">
-            <button class="filters__button">Усі</button>
-          </li>
-          <li class="filters__item">
-            <button class="filters__button">Веб-сайти</button>
-          </li>
-          <li class="filters__item">
-            <button class="filters__button">Додатки</button>
-          </li>
-          <li class="filters__item">
-            <button class="filters__button">Дизайн</button>
-          </li>
-          <li class="filters__item">
-            <button class="filters__button">Маркетинг</button>
-          </li>
-        </ul>
-        <ul class="projects">
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project1.jpg"
-                alt="Ноутбук з відкритим браузером"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">Технокряк</h2>
-                <p class="card__subtitle">Веб-сайт</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project2.jpg"
-                alt="Постер із зображенням двох баскетболістів"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">
-                  Постер <span lang="en">New Orlean vs Golden Star</span>
-                </h2>
-                <p class="card__subtitle">Дизайн</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project3.jpg"
-                alt="Логотип ресторану"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">
-                  Ресторан <span lang="en">Seafood</span>
-                </h2>
-                <p class="card__subtitle">Додаток</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project4.jpg"
-                alt="Навушники"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">Проєкт <span lang="en">Prime</span></h2>
-                <p class="card__subtitle">Маркетинг</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project5.jpg"
-                alt="Дві коробки"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">Проєкт <span lang="en">Boxes</span></h2>
-                <p class="card__subtitle">Додаток</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project6.jpg"
-                alt="Веб-сайт на екрані монітора"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">
-                  <span lang="en">Inspiration has no Borders</span>
-                </h2>
-                <p class="card__subtitle">Веб-сайт</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project7.jpg"
-                alt="Книжка"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">
-                  Видання <span lang="en">Limited Edition</span>
-                </h2>
-                <p class="card__subtitle">Дизайн</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project8.jpg"
-                alt="Етикетка"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">Проєкт <span lang="en">LAB</span></h2>
-                <p class="card__subtitle">Маркетинг</p>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item">
-            <a href="" class="card">
-              <img
-                src="images/project9.jpg"
-                alt="Ноутбук з відкритим додатком"
-                class="card__img"
-                width="370"
-                height="294"
-              />
-              <div class="card__body">
-                <h2 class="card__title">
-                  <span lang="en">Growing Business</span>
-                </h2>
-                <p class="card__subtitle">Додаток</p>
-              </div>
-            </a>
-          </li>
-        </ul>
+          <ul class="filters">
+            <li class="filters__item">
+              <button class="filters__button">Усі</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__button">Веб-сайти</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__button">Додатки</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__button">Дизайн</button>
+            </li>
+            <li class="filters__item">
+              <button class="filters__button">Маркетинг</button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project1.jpg"
+                  alt="Ноутбук з відкритим браузером"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">Технокряк</h2>
+                  <p class="card__subtitle">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project2.jpg"
+                  alt="Постер із зображенням двох баскетболістів"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">
+                    Постер <span lang="en">New Orlean vs Golden Star</span>
+                  </h2>
+                  <p class="card__subtitle">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project3.jpg"
+                  alt="Логотип ресторану"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">
+                    Ресторан <span lang="en">Seafood</span>
+                  </h2>
+                  <p class="card__subtitle">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project4.jpg"
+                  alt="Навушники"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">
+                    Проєкт <span lang="en">Prime</span>
+                  </h2>
+                  <p class="card__subtitle">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project5.jpg"
+                  alt="Дві коробки"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">
+                    Проєкт <span lang="en">Boxes</span>
+                  </h2>
+                  <p class="card__subtitle">Додаток</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project6.jpg"
+                  alt="Веб-сайт на екрані монітора"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">
+                    <span lang="en">Inspiration has no Borders</span>
+                  </h2>
+                  <p class="card__subtitle">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project7.jpg"
+                  alt="Книжка"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">
+                    Видання <span lang="en">Limited Edition</span>
+                  </h2>
+                  <p class="card__subtitle">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project8.jpg"
+                  alt="Етикетка"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">Проєкт <span lang="en">LAB</span></h2>
+                  <p class="card__subtitle">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="projects__item">
+              <a href="" class="card">
+                <img
+                  src="images/project9.jpg"
+                  alt="Ноутбук з відкритим додатком"
+                  class="card__img"
+                  width="370"
+                  height="294"
+                />
+                <div class="card__body">
+                  <h2 class="card__title">
+                    <span lang="en">Growing Business</span>
+                  </h2>
+                  <p class="card__subtitle">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="footer">

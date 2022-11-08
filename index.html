@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Студія</title>
   </head>
   <body>
@@ -56,43 +56,45 @@
         <h1 class="hero_title">Ефективні рішення для вашого бізнесу</h1>
         <button type="button" class="hero_button">Замовити послугу</button>
       </section>
-      <section class="features container section">
-        <!--Позже спрятать этот h2-->
-        <h2 class="features__title visually-hidden">Особливості</h2>
-        <!--Позже спрятать этот h2-->
-        <ul class="features__list">
-          <li class="features-item">
-            <h3 class="features-item__title">Увага до деталей</h3>
-            <p class="features-item__description">
-              Ідейні міркування, і навіть початок повсякденної роботи з
-              формування позиції.
-            </p>
-          </li>
-          <li class="features-item">
-            <h3 class="features-item__title">Пунктуальність</h3>
-            <p class="features-item__description">
-              Завдання організації, особливо рамки і місце навчання кадрів тягне
-              у себе.
-            </p>
-          </li>
-          <li class="features-item">
-            <h3 class="features-item__title">Планування</h3>
-            <p class="features-item__description">
-              Так само консультація з широким активом значною мірою зумовлює.
-            </p>
-          </li>
-          <li class="features-item">
-            <h3 class="features-item__title">Сучасні технології</h3>
-            <p class="features-item__description">
-              Значимість цих проблем настільки очевидна, що реалізація планових
-              завдань.
-            </p>
-          </li>
-        </ul>
+      <section class="features section">
+        <div class="container">
+          <!--Позже спрятать этот h2-->
+          <h2 class="features__title visually-hidden">Особливості</h2>
+          <!--Позже спрятать этот h2-->
+          <ul class="features__list">
+            <li class="features-item">
+              <h3 class="features-item__title">Увага до деталей</h3>
+              <p class="features-item__description">
+                Ідейні міркування, і навіть початок повсякденної роботи з
+                формування позиції.
+              </p>
+            </li>
+            <li class="features-item">
+              <h3 class="features-item__title">Пунктуальність</h3>
+              <p class="features-item__description">
+                Завдання організації, особливо рамки і місце навчання кадрів
+                тягне у себе.
+              </p>
+            </li>
+            <li class="features-item">
+              <h3 class="features-item__title">Планування</h3>
+              <p class="features-item__description">
+                Так само консультація з широким активом значною мірою зумовлює.
+              </p>
+            </li>
+            <li class="features-item">
+              <h3 class="features-item__title">Сучасні технології</h3>
+              <p class="features-item__description">
+                Значимість цих проблем настільки очевидна, що реалізація
+                планових завдань.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
       <section class="services">
-        <h2 class="services__title">Чим ми займаємося</h2>
-        <div class="sevrices__body container">
+        <div class="services__body container">
+          <h2 class="services__title">Чим ми займаємося</h2>
           <ul class="services__list">
             <li class="services__item">
               <img
@@ -119,48 +121,58 @@
         </div>
       </section>
       <section class="our-team section">
-        <h2 class="our-team__title">Наша команда</h2>
         <div class="our-team__body container">
+          <h2 class="our-team__title">Наша команда</h2>
           <ul class="our-team__list">
-            <li class="our-team__list-item">
+            <li class="our-team__list-item member-card">
               <img
                 src="images/member1.jpg"
                 alt="Фото співробітника"
                 class="member-card__pic"
                 width="270"
               />
-              <h3 class="member-card__title">Ігор Дем'яненко</h3>
-              <p class="member-card__position" lang="en">Product Designer</p>
+              <div class="member-card__body">
+                <h3 class="member-card__title">Ігор Дем'яненко</h3>
+                <p class="member-card__position" lang="en">Product Designer</p>
+              </div>
             </li>
-            <li class="our-team__list-item">
+            <li class="our-team__list-item member-card">
               <img
                 src="images/member2.jpg"
                 alt="Фото співробітника"
                 class="member-card__pic"
                 width="270"
               />
-              <h3 class="member-card__title">Ольга Рєпіна</h3>
-              <p class="member-card__position" lang="en">Frontend Developer</p>
+              <div class="member-card__body">
+                <h3 class="member-card__title">Ольга Рєпіна</h3>
+                <p class="member-card__position" lang="en">
+                  Frontend Developer
+                </p>
+              </div>
             </li>
-            <li class="our-team__list-item">
+            <li class="our-team__list-item member-card">
               <img
                 src="images/member3.jpg"
                 alt="Фото співробітника"
                 class="member-card__pic"
                 width="270"
               />
-              <h3 class="member-card__title">Микола Тарасов</h3>
-              <p class="member-card__position" lang="en">Marketing</p>
+              <div class="member-card__body">
+                <h3 class="member-card__title">Микола Тарасов</h3>
+                <p class="member-card__position" lang="en">Marketing</p>
+              </div>
             </li>
-            <li class="our-team__list-item">
+            <li class="our-team__list-item member-card">
               <img
                 src="images/member4.jpg"
                 alt="Фото співробітника"
                 class="member-card__pic"
                 width="270"
               />
-              <h3 class="member-card__title">Михайло Єрмаков</h3>
-              <p class="member-card__position" lang="en">UI Designer</p>
+              <div class="member-card__body">
+                <h3 class="member-card__title">Михайло Єрмаков</h3>
+                <p class="member-card__position" lang="en">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>

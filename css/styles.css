@@ -47,15 +47,15 @@ ul {
 * {
   margin: 0;
 }
-
+img {
+  display: block;
+}
 /*------------------------- header ----------------------------*/
 .header {
   border-bottom: 1px solid var(--border-header);
 }
 .header__body {
   display: flex;
-  padding-top: 24px;
-  padding-bottom: 25px;
   align-items: center;
 }
 .nav {
@@ -63,6 +63,8 @@ ul {
   align-items: center;
 }
 .logo {
+  padding: 24px 0;
+
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -83,6 +85,7 @@ ul {
 }
 
 .menu__link {
+  padding: 32px 0;
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
@@ -112,6 +115,7 @@ ul {
 }
 .header__email,
 .header__tel {
+  padding: 32px 0;
   color: inherit;
 }
 .header__contacts a:hover,
@@ -235,7 +239,6 @@ ul {
 }
 .our-team__list-item {
   background-color: var(--white);
-  padding-bottom: 30px;
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -245,8 +248,10 @@ ul {
   margin-left: 30px;
 }
 
+.member-card__body {
+  padding: 30px;
+}
 .member-card__title {
-  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -264,15 +269,14 @@ ul {
 
 .footer {
   background-color: var(--bg);
-}
-.footer__body {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer__body {
 }
 .logo--inverse {
   display: block;
   margin-bottom: 20px;
-  width: fit-content;
 
   font-family: Raleway;
   font-weight: 700;
@@ -324,7 +328,8 @@ ul {
 
 .filters {
   display: flex;
-  width: fit-content;
+  justify-content: center;
+
   margin-left: auto;
   margin-right: auto;
   list-style: none;
